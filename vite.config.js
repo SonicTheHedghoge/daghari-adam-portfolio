@@ -5,14 +5,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true
-      }
-    }
+    sourcemap: false
+    // On utilise esbuild par défaut (plus rapide, déjà inclus, pas besoin de terser)
   },
   server: {
     port: 3000,
